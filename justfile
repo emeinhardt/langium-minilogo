@@ -1,3 +1,10 @@
+# Flake + direnv + justfile dev environment for langium
+#
+# This is a reproducible, local development shell for working with langium 
+# projects: as long as you do not yourself run commands like 
+# `npm install --global _`, nothing in it should (as far as I know) introduce or 
+# modify global node package state.
+
 # # What's a justfile?
 #
 #  A modern analogue of `make` intended for use as a task runner: fewer arcane
