@@ -1,0 +1,14 @@
+# Only trigger direnv reloads upon `nix-direnv-reload`
+nix_direnv_manual_reload
+
+# Changes to these files will result in a message about needing to rerun `nix-direnv-reload` 
+watch_file flake.nix flake.lock package.json package-lock.json tsconfig.json langium-config.json language-configuration.json
+
+# Adds “$PWD/node_modules/.bin” to $PATH; this lets you run binaries in ./node_modules/bin 
+#  - without the path prefix
+# ...and hence lets you avoid soul-destroying
+#   `npm install --global _`
+# https://direnv.net/man/direnv-stdlib.1.html#codelayout-nodecode
+layout node
+
+use flake
